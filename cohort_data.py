@@ -160,7 +160,12 @@ def all_students_tuple_list(filename):
 
     student_list = []
 
-    # Code goes here
+    openfile = open(filename)
+        for line in openfile:
+            line = line.rstrip()
+            data = line.split('|')
+            data[:2] = [data[0] + " " + data[1]]
+            data_tupple = tuple(data)
 
     return student_list
 
